@@ -1,4 +1,7 @@
 // import functions and grab DOM elements
+import { renderBros } from "./bros";
+const brosKnocked = document.querySelector('knockedout-list');
+const brawlerHp = document.querySelector('brawler-bottles');
 
 // let state
 
