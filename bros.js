@@ -8,14 +8,19 @@ export function renderBros(broData) {
 
     broName.textContent = broData.name;
     broHp.id = `Bro-hp-${broData.id}`;
-    broHp.textContent = broData.hp <0 ? 0 : broData.hp;
+    broHp.textContent = broData.hp < 0 ? 0 : broData.hp;
 
-    broFace.id = `bro-face-${broData.id}`
+    broFace.id = `bro-face-${broData.id}`;
     broFace.textContent = broData.hp > 0 ? 'XXX' : 'xxx';
 
-    if (broData.hp < 0) {
+    if (broData.hp === 0) {
         broEl.classList.add('dead');
     }
 
     broEl.append(broName, broFace, broHp);
+    return broEl;
 }
+
+
+//game logic for reduction in bros and brawlers hp. 
+// styles
