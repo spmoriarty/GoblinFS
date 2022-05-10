@@ -36,14 +36,20 @@ form.addEventListener('submit', (e) => {
 });
 
 function displayBros() {
-  broListEl.textContent = '';
+    broListEl.textContent = '';
     for (let bro of bros) {
         const broDiv = renderBros(bro);
         broListEl.append(broDiv);
     }
+    
+    
 }
 displayBros();
 // set event listeners 
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
+
+// broDiv.addEventListener('click', () => {
+//     BroClickHandler(bro);
+// });
