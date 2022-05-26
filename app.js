@@ -49,6 +49,7 @@ displayBros();
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
+const broDiv = document.getElementById('bro');
 
 broDiv.addEventListener('click', () => {
     function BroClickHandler(bro) {
@@ -83,7 +84,7 @@ broDiv.addEventListener('click', () => {
                 if (brawlerHealth === 0) {
                     alert('The Bros have taken the bar!');
                 } else {
-                    alert(`${bro.name} threw a bottle and you dodged!`)
+                    alert(`${bro.name} threw a bottle and you dodged!`);
                 }
             }
 
