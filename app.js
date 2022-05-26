@@ -50,6 +50,44 @@ displayBros();
   // use user input to update state 
   // update DOM to reflect the new state
 
-// broDiv.addEventListener('click', () => {
-//     BroClickHandler(bro);
-// });
+broDiv.addEventListener('click', () => {
+    function BroClickHandler(bro) {
+
+        if (bro.hp === 0) return;
+
+        if (brawlerHp.hp === 0) return;
+
+        const brawlerHit = Math.random();
+        if (brawlerHit < 1) {
+            bro.hp--;
+
+            renderBros();
+
+            alert(`You hit ${bro.name}!`);
+
+            if (bro.hp === 0) {
+                brosKnocked++;
+                brosKnockedList.textContent = brosKnocked;
+            }
+            else {
+                alert('The bro dodged!');
+            }
+
+            const broHit = Math.random();
+            
+            if (broHit < 1) {
+                brawlerHp.hp--;
+                brawlerHealth.textContent = brawlerHp.hp;
+                alert(`${bro.name} cracked you with a bottle!`);
+
+                if (brawlerHealth === 0) {
+                    alert('The Bros have taken the bar!');
+                } else {
+                    alert(`${bro.name} threw a bottle and you dodged!`)
+                }
+            }
+
+        }
+
+    }
+});
